@@ -3,6 +3,7 @@
     --title-text-color: #000000;
     --accent-color: #18a0fb;
     --primary-white-color: #ffffff;
+    --secondary-white-color: #f5f5f5;
 }
 body{
     background-color: var(--primary-white-color);
@@ -16,6 +17,21 @@ body{
 
 .list{
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+    outline: 2px solid tomato;
+}
+
+
+/* Page-header */
+.page-header{
+    background: #ccc;
 }
 
 /* Logo */
@@ -54,27 +70,54 @@ body{
 }
 
 /* Hero */
+
+.hero{
+    text-align: center;
+}
 .hero-title{
     color: var(--title-text-color);
 
     font-weight: 400;
     font-size: 56px;
     line-height: 1.43;
-    text-align: center;
+
+
+    margin-top: 0;
+    margin-bottom: 40px;
 
 }
 
 /* Section */
+
+.section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section.no-padding{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .section-title{
     color: var(--title-text-color);
 
     font-weight: 400;
     font-size: 48px;
     line-height: 1.5;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-title.centered{
     text-align: center;
 }
 
 .section-description{
+    margin-top: 0;
+    margin-bottom: 80px;
+
     font-size: 36px;
     line-height: 1.39;
 }
@@ -83,11 +126,18 @@ body{
 
 .feature-list .title,.work-list .title{
     color: var(--title-text-color);
+    margin-bottom: 24px;
+    margin-top: 0;
 
     font-weight: 700;
     font-size: 24px;
     line-height: 1.5;
 
+}
+
+.feature-list p{
+    margin-top: 0;
+    margin-bottom: 32px;
 }
 
 
@@ -96,18 +146,36 @@ body{
     color: var(--accent-color);
 }
 
+/* Works */
+
+.work-list > .item{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: var(--primary-white-color);
+}
+
+.work-list > .item:nth-child(2n){
+    background: var(--secondary-white-color);
+}
+
 /* Examples */
 
-/* .work-list .title{
+.work-list .title{ 
     color: var(--title-text-color);
 
     font-weight: 700;
     font-size: 24px;
     line-height: 1.5;
-} */
+}
 
 /* Button */
 .button{
+    border: 1px solid transparent;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 11px 34px;
+    min-width: 130px;
+
     color: var(--title-text-color);
     background-color: var(--primary-white-color);
 
@@ -115,6 +183,8 @@ body{
     font-size: 15px;
     line-height: 1.2;
     text-decoration: none;
+    text-align: center;
+
 }
 
 .button.primary{
@@ -125,4 +195,5 @@ body{
 .button.secondary{
     color: var(--accent-color);
     background-color: var(--primary-white-color);
+    border-color: var(--accent-color);
 }
